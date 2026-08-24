@@ -1,0 +1,38 @@
+[project]
+name = "urbanagent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "pigu163" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "city2graph>=1.0.0",
+    "duckdb>=1.5.5",
+    "geopandas>=1.1.4",
+    "h3>=4.5.0",
+    "networkx>=3.6.1",
+    "numpy>=2.5.2",
+    "osmnx>=2.1.1",
+    "polars>=1.44.0",
+    "pyarrow>=25.0.1",
+    "pydantic>=2.13.4",
+    "pyproj>=3.7.2",
+    "scikit-learn>=1.9.0",
+    "shapely>=2.1.2",
+    "srai>=0.10.2",
+]
+
+[project.scripts]
+urbanagent = "urbanagent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.4",
+]
